@@ -1,0 +1,284 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="test.css" />
+    
+</head>
+<body>
+
+    <div class="top"></div>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+
+
+    <ul>
+        <li><a class="active" href="test.html">HOME</a></li>
+        <li><a href="media.html">MEDIA</a></li>
+        <li><a href="">CONSULTATION</a></li>
+        <li><a href="doctors.html">DOCTORS</a></li>
+        <li><a href="https://forms.gle/jVnY8R9ij5CrHwqp9">CAREERS</a></li>
+        <li><a href="achivements.html">ACHIVEMENTS</a></li>
+        <li><a href="consulation.html">CONTACT US</a></li>
+    </ul>
+    <div class="h1">
+        <h1>NIMISH</h1>
+        <h2>NETHRALAYA</h2>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <div class="th1">
+        <h1>Our Timeline</h1>
+    </div>
+    <div class="timeline">
+
+        <div class="container right">
+            <div class="content">
+                <h2>2040</h2>
+                <p>Till date we treat patients for a very low price and we are nearing the milestone of streak of 500 successful surgeries.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2038</h2>
+                <p>On october 23rd , on the birthday of Nimish Prajwal, he completed the mileston of 1500 successful surgeries. </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2036</h2>
+                <p>This was a very special for the Nimish Nethralaya as they had found out  the mediciane and a permanent cure for eye cancer, which was produced in large numbers in his factory.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2031</h2>
+                <p>By this time, Dr.Nimish Prajwal and his Co. had worked to their limits for which they were honourder with the best eye speciality hospital of 2031 in India.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2028</h2>
+                <p>Dr.Nimish Prajwal, on of the best eye surgeons and eye specialst in the world started the Nimish Nethralaya with a vision to treat everyone in low cost.</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="header">
+        <h2>Our Success Rate in different complex surgeries</h2>
+    </div>
+    <br />
+    <br />
+
+
+    <p>Cataract</p>
+    <div class="container">
+        <div class="skills html">97%</div>
+    </div>
+
+    <p>LASIK</p>
+    <div class="container">
+        <div class="skills css">85%</div>
+    </div>
+
+    <p>Laser Assisted Sub-Epithelial Keratomileusis</p>
+    <div class="container">
+        <div class="skills js">87%</div>
+    </div>
+
+    <p>CustomVue IntraLasik</p>
+    <div class="container">
+        <div class="skills php">84%</div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="columns">
+        <ul class="price">
+            <li class="header">Basic Surgery</li>
+            <li class="grey">$45 /Hour</li>
+            <li>Any Basic Surgery</li>
+            <li>By Junior Doctors</li>
+            <li>Best Plan</li>
+            <li>Suggested Plan</li>
+
+        </ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header" style="background-color:#04AA6D">BY Dr.Nimish</li>
+            <li class="grey">$100 /hour</li>
+            <li>25GB Storage</li>
+            <li>25 Emails</li>
+            <li>25 Domains</li>
+            <li>2GB Bandwidth</li>
+
+        </ul>
+    </div>
+
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">Complex Surgery</li>
+            <li class="grey">$ 49.99 / hour</li>
+            <li>50GB Storage</li>
+            <li>50 Emails</li>
+            <li>50 Domains</li>
+            <li>5GB Bandwidth</li>
+
+        </ul>
+    </div>
+    <div id="mydiv">
+        <div id="mydivheader">Click here to move</div>
+        <p>Help us by donating money</p>
+        <p>To save people</p>
+        <p>For which you gain blessings</p>
+    </div>
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("mydiv"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width slides/quotes -->
+        <div class="mySlides">
+            <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+            <p class="author">- John Keats</p>
+        </div>
+
+        <div class="mySlides">
+            <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+            <p class="author">- Ernest Hemingway</p>
+        </div>
+
+        <div class="mySlides">
+            <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+            <p class="author">- Thomas A. Edison</p>
+        </div>
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
